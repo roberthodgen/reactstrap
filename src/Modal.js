@@ -260,7 +260,6 @@ class Modal extends React.Component {
     if (!this._element) {
       this._element = document.createElement('div');
       this._element.setAttribute('tabindex', '-1');
-      this._element.style.position = 'relative';
       this._element.style.zIndex = this.props.zIndex;
       document.body.appendChild(this._element);
     }

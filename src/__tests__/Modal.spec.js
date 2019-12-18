@@ -840,6 +840,15 @@ describe('Modal', () => {
     expect(wrapper.instance()._element.style.zIndex).toBe('1');
   });
 
+  it('should not set element style.position for IE11 compatibility', () => {
+    const wrapper = shallow(
+      <Modal isOpen>
+        Yo!
+      </Modal>
+    );
+    expect(wrapper.instance()._element.style.position).toBe('');
+  });
+
   it('should allow focus on only focusable elements', () => {
     isOpen = true;
 
